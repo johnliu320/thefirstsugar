@@ -1,0 +1,188 @@
+/* stone_item.html */
+.stone{
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding:  80px 15px;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.stone_item{
+    display: flex;
+    flex-wrap: wrap;
+}
+.stone_item .pic{
+    width: 100%;
+    box-shadow: 1px 1px 5px #ddd;
+}
+.stone_item .pic img{
+    width: 100%;
+}
+.stone_item .txt{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+.stone_item .txt h3{
+    font-size: 36px;
+}
+.stone_item .txt span{
+    font-size: 24pt;
+    color: crimson;
+}
+.stone_item button{
+    margin-top: 15px;
+    width: 50%;
+    height: 36px;
+    background-color: #fbba59;
+    border: none;
+    border-radius: 20px;
+}
+.stone_more h2{
+    margin: auto ;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    text-align: center;
+}
+.product_description{
+    margin: auto;
+    
+}
+.product_item{
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width:768px) {
+    .stone{
+        max-width: 768px;
+        margin: 0 auto;
+        padding:  80px;
+    }
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .stone_item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .stone_item .pic{
+        width: 100%;
+        box-shadow: 1px 1px 5px #ddd;
+    }
+    .stone_item .pic img{
+        width: 100%;
+    }
+    .stone_item .txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 540px;
+        padding-left: 15px;
+    }
+    .stone_item .txt h3{
+        font-size: 36px;
+    }
+    .stone_item .txt span{
+        font-size: 24pt;
+        color: crimson;
+    }
+    .stone_item button{
+        margin-top: 15px;
+        width: 50%;
+        height: 36px;
+        background-color: #fbba59;
+        border: none;
+        border-radius: 20px;
+    }
+    .stone_item button:hover{
+        background-color: #a94719;
+        border: none;
+        color: #fff;
+    }
+    
+    .stone_more h2{
+        margin: auto ;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+        text-align: center;
+    }
+    .product_description{
+        margin: auto;
+        max-width: 768px;
+    }
+    .product_item{
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:1200px) {
+    .stone{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding:  80px auto;
+    }
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .stone_item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .stone_item .pic{
+        width: 500px;
+        box-shadow: 1px 1px 5px #ddd;
+    }
+    .stone_item .pic img{
+        width: 100%;
+    }
+    .stone_item .txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 525px;                
+    }
+    .stone_item .txt h3{
+        font-size: 36px;
+    }
+    .stone_item .txt span{
+        font-size: 24pt;
+        color: crimson;
+    }
+    .stone_item button{
+        width: 60%;
+        height: 36px;
+        background-color: #fbba59;
+        border: none;
+        border-radius: 20px;
+    }
+    .stone_item button:hover{
+        background-color: #a94719;
+        border: none;
+        color: #fff;
+    }
+    .stone_more h2{
+        max-width: 1200px;
+        margin: auto;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+        text-align: center;
+    }
+    .product_description{
+        margin: auto;
+        max-width: 1200px;
+    }
+    .product_item{
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+}

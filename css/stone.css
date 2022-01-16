@@ -1,0 +1,111 @@
+/* stone.html  */
+.stone{
+    margin: auto;
+    max-width: 1200px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap{
+    width: 100%;
+    
+}
+.blacksugar_step h2{
+    color: #fff;
+}
+.stone_item{
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.stone_item a img{
+    width: 80%;
+}
+.stone_classification{
+    display: none;
+}
+.stone_right{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.stone_h2 {
+    padding-left: 15px;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+                     
+    }
+    .stone_item{
+        width: calc(100% / 2 - 30px);
+        margin: auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .stone_item:last-child{
+        margin-right: auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .firstsugar{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+    }
+    .story_txt{
+        width: calc(100% / 2);
+        margin-top: 50px;
+    }
+}
+@media screen and (min-width:1200px){
+    .stone_item{
+        width: calc(100% / 4 - 30px);
+        margin: auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .stone_item a img{
+        width: 100%;
+    }
+    .stone_classification{
+        display: block;
+        height: 200px;
+        list-style-type: none;
+        margin: 0 0 20px;
+        padding: 0;
+        border: 1px solid #E2E2E2;
+        width: calc(100% / 4 - 20px);
+    }
+    .stone_classification li a{
+        border: none;
+        border-bottom: 1px solid #E2E2E2;
+        background: none;
+        color: #424242;
+        display: block;
+        font-size: .9rem;
+        padding: 10px;
+        text-decoration: none;
+        text-align: left;
+    }
+    .stone_h2 {
+       width: 100%;
+    }
+    .stone_h2 h2{
+       text-align: left;
+    }
+    .stone_right{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}

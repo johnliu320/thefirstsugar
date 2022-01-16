@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初糖</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news{
+            max-width: 1200px;
+            padding-top: 70px;
+            margin:  auto ;
+            font-size: 0;
+        }
+        .news img{
+            width: 100%;
+        }
+        
+        .story{
+            background-color: #fbba59;
+        }
+        
+        .story_txt{
+            width: calc(100% - 60px);
+            margin-top:0px ;
+            padding: 30px;
+            color: #fff;
+        }
+        .story_pic{
+            width: 100%;
+            font-size: 0;
+        }
+        .story_pic img{
+            width: 100%;
+        }
+        .story_txt h2{
+            font-size: 36px;
+        }
+        .story_txt span{
+            font-size: 24px;
+        }
+        .story_txt p{
+            font-size: 18px;
+        }
+        .blacksugar_step{
+            background-color: #6b2c0e;
+            padding: 100px 0;
+        }
+        
+        h2{
+            text-align: center;
+            font-size: 32px;
+        }
+        
+        .stone{
+            margin: 100px auto;
+            text-align: center;
+        }
+        
+        .blacksugar_step h2{
+            color: #fff;
+        }
+       
+        .step{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            line-height: 0;            
+        }
+        .step_item{
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        .step_item :nth-child(5n){
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        .step_item p{
+            position: absolute;
+            top: 45%;
+            left:35%;
+            color: #fff;
+            font-size: 32px;
+        }
+
+        @media screen and (min-width:768px) {
+            
+            .stone{
+                max-width: 768px;
+            }
+            .wrap{
+                display: flex;
+                margin: auto;
+            }
+            .stone_item{
+                width: calc(100% / 3 - 30px);
+                padding: 0 15px;
+                /* box-sizing: border-box; */
+            }
+            .stone_item img{
+                width: 100%;
+            }
+            .story_pic{
+                width: calc(100% / 2);
+                font-size: 0;
+            }
+            .firstsugar{
+                max-width: 1200px;
+                margin: auto;
+                justify-content: center;
+                display: flex;
+            }
+            .story_txt{
+                width: calc(100% / 2);
+                margin-top: 50px;
+            }
+            .step{
+                display: flex;
+                justify-content: center;
+                line-height: 0;
+            }
+            .step_item{
+                height: auto;
+                position: relative;
+                overflow: visible;
+            }
+            .step_item p{
+                position: absolute;
+                top: 45%;
+                left:35%;
+                color: #fff;
+                font-size: 32px;
+            }
+            .step_item img{
+                transform:scale(1,1);
+                transition: all 1s ease-out;
+                box-shadow: 1px 1px 5px #000;
+
+            }
+            .step_item img:hover{
+                transform:scale(1.1,1.1);
+                transition: all 1s ease-out;
+                z-index: 10;
+                box-shadow: 1px 1px 30px #000;
+            }
+            .blacksugar_step h2{
+                margin-bottom: 40px;
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .stone{
+                max-width: 1200px;
+            }
+            .wrap{
+                display: flex;
+                margin: auto;
+            }
+            .stone_item{
+                width: calc(100% / 3 - 30px);
+                padding: 0 15px;
+                /* box-sizing: border-box; */
+            }
+            .stone_item img{
+                width: 100%;
+            }
+            .story_pic{
+                width: calc(100% / 2);
+                font-size: 0;
+            }
+            .firstsugar{
+                max-width: 1200px;
+                margin: auto;
+                justify-content: center;
+                display: flex;
+            }
+            .story_txt{
+                width: calc(100% / 2);
+                margin-top: 50px;
+            }
+            .step{
+                display: flex;
+                justify-content: center;
+                line-height: 0;
+            }
+            .step_item{
+                height: auto;
+                position: relative;
+                overflow: visible;
+            }
+            .step_item p{
+                position: absolute;
+                top: 45%;
+                left:35%;
+                color: #fff;
+                font-size: 32px;
+            }
+            .step_item img{
+                transform:scale(1,1);
+                transition: all 1s ease-out;
+                box-shadow: 1px 1px 5px #000;
+
+            }
+            .step_item img:hover{
+                transform:scale(1.1,1.1);
+                transition: all 1s ease-out;
+                z-index: 10;
+                box-shadow: 1px 1px 30px #000;
+            }
+            .blacksugar_step h2{
+                margin-bottom: 40px;
+            }
+        }
+
+        .news{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+    .fade{
+        font-size: 0;
+    }
+    /* Slideshow container */
+    .slideshow-container {
+        padding-top: 70px;
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #fff;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_control">
+
+    <div class="header">
+        <a href="index.html" class="logo">
+            <img src="pic/logo.png" alt="">
+        </a>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="about.html">關於黑糖</a>
+            <a href="news.html">最新消息</a>
+            <a href="stone.html">線上購買</a>
+            <a href="contact.html">聯絡我們</a>
+            <a href="">登入</a>
+            <a href="">加入會員</a>
+        </nav>
+    </div>
+    
+    
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">第一張</div>
+            <a href=""><img src="pic/news_commodity.png" style="width:100%"></a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">第二張</div>
+            <img src="pic/news_commodity.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">第三張</div>
+            <img src="pic/news_commodity.png" style="width:100%">
+        </div>
+
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    
+
+    <section class="story">
+        <div class="firstsugar">
+            <div class="story_txt">
+                <h2>品牌故事</h2>
+                <span><span style="color:#A94719 ;">黑糖</span>怎麼來？</span>
+                <p>初糖是採用最原始純手工提煉出來的糖，也是最自然，能與其他天然營養的食材貼近，展現食材間的和諧與健康。</p>
+            </div>
+            <div class="story_pic">
+                <img src="pic/story_firstsugar.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="blacksugar_step">
+        <h2>黑糖的製作過程</h2>
+        <div class="step">
+            <div class="step_item">
+                <img src="pic/step_1.png" alt="">
+                <p>採收</p>
+            </div>
+            <div class="step_item">
+                <img src="pic/step_2.jpg" alt="">
+                <p>榨汁</p>
+            </div>
+            <div class="step_item">
+                <img src="pic/step_3.jpg" alt="">
+                <p>過濾</p>
+            </div>
+            <div class="step_item">
+                <img src="pic/step_4.jpg" alt="">
+                <p>熬煮</p>
+            </div>
+            <div class="step_item">
+                <img src="pic/step_5.jpg" alt="">
+                <p>冷卻</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stone">
+        <h2>線上購買</h2>
+        <div class="wrap">
+                <div class="stone_item">
+                    <a href=""><img src="pic/sugarbox.png"></a>
+                    <h3>黑糖禮盒</h3>
+                    <span>NT.800</span>
+                </div>
+            
+                <div class="stone_item">
+                    <a href=""><img src="pic/sugarbox2.png"></a>
+                    <h3>黑糖大禮盒</h3>
+                    <span>NT.1200</span>
+                </div>
+                
+                <div class="stone_item">
+                    <a href=""><img src="pic/sugarbox_mid.png"></a>
+                    <h3>黑糖單種口味</h3>
+                    <span>每入NT.200</span>
+                </div>
+            
+            
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer_txt">
+            <ul class="footer_ul">
+                <li><a href="about.html">關於黑糖</a>  </li>
+                <li><a href="news.html">最新消息</a>  </li>
+                <li><a href="stone.html">線上購買</a>  </li>
+                <li><a href="contact.html">聯絡我們</a>  </li>                
+            </ul>
+        </div>
+        <div class="footer_item">
+            <a href=></a><img src="pic/logo.png" alt=""></a>
+            <a href=><img src="pic/facebook.png" alt=""></a>
+            <a href=><img src="pic/instagram.png" alt=""></a>
+            <a href=><img src="pic/line.png" alt=""><br></a>
+        </div>    
+        <div class="footer_copyright">
+            <p>Copyright ©2021 TheFirstSugar. All rights reserved.</p>
+        </div>
+    </div>
+
+</div>
+<script>
+     var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        slides[slideIndex - 1].style.display = "block";
+        
+    }
+    
+</script>
+</body>
+</html>
